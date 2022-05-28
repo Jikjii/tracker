@@ -33,10 +33,15 @@ const Board = () => {
                 <h1>Project Title</h1>
             </Row>
             <div className="board-container d-flex flex-row flex-grow-1">
-                <BoardSection
-                    title='Backlog'
-                    tasks={data.tasks}
-                />
+                {sections.map((section: String, index: number) => {
+                    let filteredData: Array<Task> = data ? data.tasks.filter((task: Task) => {return task.status === section}) : [];
+                    return (
+                        <BoardSection
+                        title='Backlog'
+                        tasks={filteredData}
+                    />
+                )
+                })}
             </div>
         </div>
     )
