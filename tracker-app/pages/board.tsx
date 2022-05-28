@@ -37,7 +37,8 @@ const Board = () => {
                     let filteredData: Array<Task> = data ? data.tasks.filter((task: Task) => {return task.status === section}) : [];
                     return (
                         <BoardSection
-                        title='Backlog'
+                        title={section}
+                        key={index}
                         tasks={filteredData}
                     />
                 )
