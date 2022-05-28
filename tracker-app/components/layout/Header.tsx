@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <Navbar>
             <Container>
-                <NavbarBrand>
+                <NavbarBrand href="#home">
                     Porject Managment
                 </NavbarBrand>
                 <Navbar.Toggle />
@@ -14,7 +14,7 @@ const Header = () => {
                     <Navbar.Text className="p-3">
                         Signed in as: <a href="#login">Mark Otto</a>
                     </Navbar.Text>
-                    <Link href="" passHref>
+                    <Link href="/login" passHref>
                         <Button>Log out</Button>
                     </Link>
                 </Navbar.Collapse>
